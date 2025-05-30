@@ -1,0 +1,49 @@
+services:
+  caddy:
+    image: ghcr.io/grrlopes/cashbox-pipe/cashbox-proxy:latest
+    container_name: caddy_proxy
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - db_net
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+      # - caddyfile:/caddyfile
+      # - caddyfile:/etc/caddy
+
+  db:
+    image: surrealdb/surrealdb:latest
+    user: root
+    container_name: surreal_db
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    entrypoint: 
+      - /surreal 
+      - start 
+      - --user
+      - $DB_USER
+      - --pass
+      - $DB_PASSWORD
+      - rocksdb:///data/database.db
+      - --log 
+      - trace
+    volumes:
+      - surreal_db:/data
+
+    networks:
+      - db_net
+
+volumes:
+  surreal_db:
+  caddy_data:
+  caddy_config:
+  caddyfile:
+networks:
+  db_net:
+    driver: bridge

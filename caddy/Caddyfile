@@ -1,0 +1,14 @@
+# domain name.
+
+looptask.uk {
+        # Set this path to your site's directory.
+        #root * /usr/share/caddy
+
+        # Enable the static file server.
+        #file_server
+
+        handle_path /api/mobile/* {
+                reverse_proxy db:8000
+        }
+
+}

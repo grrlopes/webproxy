@@ -12,9 +12,3 @@ looptask.uk {
         }
 
 }
-
-www.looptask.uk {
-          root * /usr/share/caddy
-
-          file_server
-}

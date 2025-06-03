@@ -8,7 +8,7 @@ looptask.uk {
         #file_server
 
         handle_path /api/mobile/* {
-                reverse_proxy db:8000
+                reverse_proxy db.service.consul:8000
         }
 
 }

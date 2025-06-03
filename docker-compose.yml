@@ -10,8 +10,6 @@ services:
       - 443:443
     networks:
       - db_net
-    dns:
-      - 10.116.0.3
     volumes:
       - caddy_data:/data
       - caddy_config:/config

@@ -10,6 +10,8 @@ services:
       - 443:443
     networks:
       - db_net
+    dns:
+      - ${C_DNS}
     volumes:
       - caddy_data:/data
       - caddy_config:/config

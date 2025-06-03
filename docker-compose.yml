@@ -8,6 +8,8 @@ services:
     ports:
       - 80:80
       - 443:443
+    dns:
+      - 10.116.0.3
     networks:
       - db_net
     volumes:

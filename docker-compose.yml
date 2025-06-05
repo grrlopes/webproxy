@@ -10,6 +10,7 @@ services:
       - 443:443
     dns:
       - 10.116.0.3
+      - 1.1.1.1
     networks:
       - db_net
     volumes:

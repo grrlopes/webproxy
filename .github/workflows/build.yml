@@ -1,14 +1,18 @@
-name: Publish Cashbox image
+name: Publish web proxy image
 on:
   push:
-    branches:
-      - master
+    tags:
+      - '*'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Extract version from tag
+      id: extract_tag
+      run: echo "TAG=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
     - name: Log in to GitHub Container Registry
       uses: docker/login-action@v2
@@ -19,8 +23,12 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ghcr.io/${{ github.repository }}/cashbox-proxy:latest .
-        docker push ghcr.io/${{ github.repository }}/cashbox-proxy:latest
+        IMAGE=ghcr.io/${{ github.repository }}/webproxy
+        echo "Building $IMAGE:$TAG and $IMAGE:latest"
+
+        docker build -t $IMAGE:$TAG -t $IMAGE:latest .
+        docker push $IMAGE:$TAG
+        docker push $IMAGE:latest
 
     - name: Log out from GitHub Container Registry
-      run: docker logout ghcr.io
+      run: docker logout ghcr.ioprefect3

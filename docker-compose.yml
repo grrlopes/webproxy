@@ -1,25 +1,22 @@
 services:
-  caddy:
-    image: ghcr.io/grrlopes/cashbox-pipe/cashbox-proxy:latest
-    container_name: caddy_proxy
-    restart: unless-stopped
+  webproxy:
+    image: caddy:latest
+    container_name: webproxy
     cap_add:
       - NET_ADMIN
     ports:
-      - 80:80
-      - 443:443
-    dns:
-      - 10.116.0.3
-      - 1.1.1.1
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
     networks:
-      - db_net
+      - webproxy_net
     volumes:
       - caddy_data:/data
       - caddy_config:/config
 
+networks:
+  webproxy_net:
+    external: true
 volumes:
   caddy_data:
   caddy_config:
-networks:
-  db_net:
-    driver: bridge

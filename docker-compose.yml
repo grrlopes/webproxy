@@ -1,6 +1,6 @@
 services:
   webproxy:
-    image: caddy:latest
+    image: ghcr.io/grrlopes/webproxy/webproxy:latest
     container_name: webproxy
     cap_add:
       - NET_ADMIN

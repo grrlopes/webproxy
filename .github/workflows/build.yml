@@ -31,4 +31,4 @@ jobs:
         docker push $IMAGE:latest
 
     - name: Log out from GitHub Container Registry
-      run: docker logout ghcr.ioprefect3
+      run: docker logout ghcr.io

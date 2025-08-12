@@ -1,14 +1,21 @@
 # domain name.
 
 looptask.uk {
-        # Set this path to your site's directory.
-        #root * /usr/share/caddy
-
-        # Enable the static file server.
-        #file_server
-
         handle_path /api/mobile/* {
                 reverse_proxy db.service.consul:8000
         }
+}
 
+:4200 {
+    reverse_proxy api/* api_server:4200
+}
+
+http://prefectweb.service.consul {
+    reverse_proxy api_server:4200
+}
+
+http://ns.service.consul {
+    root * /usr/share/caddy
+
+    file_server
 }

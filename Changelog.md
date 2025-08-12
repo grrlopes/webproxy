@@ -1,10 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [0.1.2] - 2025-08-08
-### Changed
-- Changed dockerfile to include project image version.
+## [0.1.4] - 2025-08-12
+### Added
+- Four more domain
+- exposed 4200 port dockerfile
 
 ## [0.1.3] - 2025-08-08
 ### Fixed
 - Login registry pipeline
+
+## [0.1.2] - 2025-08-08
+### Changed
+- Changed dockerfile to include project image version.
+

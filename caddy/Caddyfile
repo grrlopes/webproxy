@@ -19,3 +19,7 @@ http://ns.service.consul {
 
     file_server
 }
+
+minio.looptask.work {
+    reverse_proxy minio.service.consul:9001
+}

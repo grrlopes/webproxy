@@ -1,25 +1,25 @@
 # domain name.
 
 looptask.uk {
-        handle_path /api/mobile/* {
-                reverse_proxy db.service.consul:8000
-        }
-}
-
-:4200 {
-    reverse_proxy api/* api_server:4200
-}
-
-http://prefectweb.service.consul {
-    reverse_proxy api_server:4200
-}
-
-http://ns.service.consul {
-    root * /usr/share/caddy
-
-    file_server
+    handle_path /api/mobile/* {
+            reverse_proxy db.service.consul:8000
+    }
 }
 
 minio.looptask.work {
     reverse_proxy minio.service.consul:9001
+}
+
+prefectweb.service.consul:80 {
+    reverse_proxy api_server:4200
+}
+
+prefectapi.service.consul:80 {
+    reverse_proxy api_server:4200
+}
+
+ns.service.consul:80 {
+    root * /usr/share/caddy
+
+    file_server
 }

@@ -10,13 +10,13 @@ services:
       - "4200:80"
     restart: unless-stopped
     networks:
-      - webproxy_net
+      - webproxy-net
     volumes:
       - caddy_data:/data
       - caddy_config:/config
 
 networks:
-  webproxy_net:
+  webproxy-net:
     external: true
 volumes:
   caddy_data:

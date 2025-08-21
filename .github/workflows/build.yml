@@ -32,7 +32,7 @@ jobs:
         IMAGE=ghcr.io/${{ github.repository }}/webproxy
         echo "Building $IMAGE:$TAG and $IMAGE:latest"
 
-        docker buildx build --platform linux/amd64,linux/arm64 -t $IMAGE-$TAG -t $IMAGE-latest --push .
+        docker buildx build --platform linux/amd64,linux/arm64 -t $IMAGE:$TAG -t $IMAGE:latest --push .
 
     - name: Log out from GitHub Container Registry
       run: docker logout ghcr.io

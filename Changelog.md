@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.9] - 2025-08-20
+### Added
+- Multi-arch to workflow.
+
 ## [0.1.8] - 2025-08-20
 ### Changed
 - Renamed network.

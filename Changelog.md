@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.2.1] - 2025-08-26
+### Changed
+- prefect local addr api
+
 ## [0.2.0] - 2025-08-20
 ### Changed
 - Fix prefix version from workflow

@@ -1,8 +1,8 @@
 # domain name.
 
-looptask.uk {
+cashbox.work {
     handle_path /api/mobile/* {
-            reverse_proxy db.service.consul:8000
+      reverse_proxy surreal.service.consul:8000
     }
 }
 
@@ -11,11 +11,11 @@ minio.looptask.work {
 }
 
 prefectweb.service.consul:80 {
-    reverse_proxy api_server:4200
+    reverse_proxy server:4200
 }
 
 prefectapi.service.consul:80 {
-    reverse_proxy api_server:4200
+    reverse_proxy server:4200
 }
 
 ns.service.consul:80 {

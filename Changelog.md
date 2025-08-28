@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.2.2] - 2025-08-27
+### Added
+- New zone rule for metabase
+
 ## [0.2.1] - 2025-08-26
 ### Changed
 - prefect local addr api

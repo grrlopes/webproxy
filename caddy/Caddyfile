@@ -10,6 +10,10 @@ minio.looptask.work {
     reverse_proxy minio.service.consul:9001
 }
 
+metabase.looptask.work {
+    reverse_proxy metabase:3000
+}
+
 prefectweb.service.consul:80 {
     reverse_proxy server:4200
 }

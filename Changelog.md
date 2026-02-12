@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.2.3] - 2026-02-12
+### Added
+- New zone rule for mail
+
 ## [0.2.2] - 2025-08-27
 ### Added
 - New zone rule for metabase

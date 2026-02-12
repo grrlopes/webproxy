@@ -27,3 +27,7 @@ ns.service.consul:80 {
 
     file_server
 }
+
+mail.looptask.work:25 {
+    reverse_proxy mail:25
+}

@@ -6,10 +6,6 @@ cashbox.work {
     }
 }
 
-minio.looptask.work {
-    reverse_proxy minio.service.consul:9001
-}
-
 metabase.looptask.work {
     reverse_proxy metabase:3000
 }

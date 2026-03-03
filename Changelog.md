@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.2.4] - 2026-03-02
+### Added
+- Remove zone rule for minio
+
 ## [0.2.3] - 2026-02-12
 ### Added
 - New zone rule for mail

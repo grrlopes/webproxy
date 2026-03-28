@@ -1,12 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.2.6] - 2026-03-28
+### Removed
+- Removed port from gotify rule
+
 ## [0.2.5] - 2026-03-28
 ### Added
 - New zone rule for gotify
 
 ## [0.2.4] - 2026-03-02
-### Added
+### Removed
 - Remove zone rule for minio
 
 ## [0.2.3] - 2026-02-12

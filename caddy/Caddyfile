@@ -27,3 +27,7 @@ ns.service.consul:80 {
 mail.looptask.work:25 {
     reverse_proxy mail:25
 }
+
+notifier.looptask.work:80 {
+    reverse_proxy notifier:8590
+}

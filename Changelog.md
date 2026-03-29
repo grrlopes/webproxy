@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.2.8] - 2026-03-28
+### Added
+- Added local service for gotify
+
 ## [0.2.7] - 2026-03-28
 ### Changed
 - Changed port from gotify rule

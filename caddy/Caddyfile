@@ -35,3 +35,11 @@ notifier.looptask.work {
 notifier.service.consul:80 {
     reverse_proxy notifier:80
 }
+
+guard.looptask.work {
+    reverse_proxy guard:8080
+}
+
+guard.service.consul:80 {
+    reverse_proxy guard:8080
+}

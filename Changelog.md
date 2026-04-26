@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.2.9] - 2026-04-25
+### Added
+- Added new entry for guard
+
 ## [0.2.8] - 2026-03-28
 ### Added
 - Added local service for gotify

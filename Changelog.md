@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2026-04-27
+### Added
+- Added new entry for nobro inventory
+
 ## [0.2.9] - 2026-04-25
 ### Added
 - Added new entry for guard

@@ -47,3 +47,11 @@ guard.service.consul:80 {
 nobro.looptask.work {
     reverse_proxy web:8022
 }
+
+idp.looptask.work {
+    reverse_proxy web:8090
+}
+
+inv.looptask.work {
+    reverse_proxy web:8080
+}

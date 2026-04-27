@@ -43,3 +43,7 @@ guard.looptask.work {
 guard.service.consul:80 {
     reverse_proxy guard:8080
 }
+
+nobro.looptask.work {
+    reverse_proxy inventory:8080
+}

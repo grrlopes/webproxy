@@ -49,7 +49,20 @@ nobro.looptask.work {
 }
 
 idp.looptask.work {
-    reverse_proxy web:8090
+    header {
+        Access-Control-Allow-Origin "https://nobro.looptask.work"
+        Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+        Access-Control-Allow-Headers "Origin, Content-Type, Accept, Authorization"
+        Access-Control-Allow-Credentials "true"
+        Access-Control-Max-Age "86400"
+    }
+
+    @options {
+        method OPTIONS
+    }
+    respond @options 204
+
+    reverse_proxy pocketbase:8090
 }
 
 inv.looptask.work {

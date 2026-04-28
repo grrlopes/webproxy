@@ -65,5 +65,17 @@ idp.looptask.work {
 }
 
 inv.looptask.work {
+    header {
+        >Access-Control-Allow-Origin "https://nobro.looptask.work"
+        >Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+        >Access-Control-Allow-Headers "Origin, Content-Type, Accept, Authorization"
+        >Access-Control-Allow-Credentials "true"
+    }
+
+    @options {
+        method OPTIONS
+    }
+    respond @options 204
+
     reverse_proxy web:8080
 }

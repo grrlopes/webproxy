@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.3.4] - 2026-04-27
+### Added
+- Added options header to idp
+
 ## [0.3.3] - 2026-04-27
 ### Added
 - Added options header to idp

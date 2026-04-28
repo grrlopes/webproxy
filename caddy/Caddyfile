@@ -50,11 +50,10 @@ nobro.looptask.work {
 
 idp.looptask.work {
     header {
-        Access-Control-Allow-Origin "https://nobro.looptask.work"
-        Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
-        Access-Control-Allow-Headers "Origin, Content-Type, Accept, Authorization"
-        Access-Control-Allow-Credentials "true"
-        Access-Control-Max-Age "86400"
+        >Access-Control-Allow-Origin "https://nobro.looptask.work"
+        >Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+        >Access-Control-Allow-Headers "Origin, Content-Type, Accept, Authorization"
+        >Access-Control-Allow-Credentials "true"
     }
 
     @options {
